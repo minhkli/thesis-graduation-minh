@@ -299,7 +299,7 @@ def tab2():
             label3.config(text=status)
 
             # print(file_path.replace("raw_data/images", "NDVI"))
-            NDVI_img = Image.open(file_path.replace("raw_data", "NDVI"))
+            NDVI_img = Image.open(file_path.replace("raw_data/images", "NDVI"))
             NDVI_img = NDVI_img.resize((200, 170))
             photo = ImageTk.PhotoImage(NDVI_img)
             label = tk.Label(tab2_frame, image=photo)
