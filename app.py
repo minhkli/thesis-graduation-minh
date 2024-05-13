@@ -11,7 +11,7 @@ import base64
 import os
 import paho.mqtt.client as mqtt
 import json
-import RPi.GPIO as GPIO #Run tren Raspberry Pi
+# import RPi.GPIO as GPIO #Run tren Raspberry Pi
 import time
 
 THINGSBOARD_HOST = 'thingsboard.dke.vn'
@@ -342,19 +342,19 @@ def tab2():
         label1.pack(pady=10)
         label1.place(x=410, y=275, width=175, height=23)
 
-    def button4_click():
-        GPIO.setmode(GPIO.BCM)
-        GPIO.setup(17, GPIO.OUT)
-        GPIO.output(17, 1)
-        time.sleep(0.002)
-        GPIO.cleanup()
-
-        time.sleep(0.1)
-
-        GPIO.setmode(GPIO.BCM)
-        GPIO.setup(17, GPIO.OUT)
-        time.sleep(0.001)
-        GPIO.cleanup()
+    # def button4_click():
+    #     GPIO.setmode(GPIO.BCM)
+    #     GPIO.setup(17, GPIO.OUT)
+    #     GPIO.output(17, 1)
+    #     time.sleep(0.002)
+    #     GPIO.cleanup()
+    #
+    #     time.sleep(0.1)
+    #
+    #     GPIO.setmode(GPIO.BCM)
+    #     GPIO.setup(17, GPIO.OUT)
+    #     time.sleep(0.001)
+    #     GPIO.cleanup()
 
     # Create Button 1
     button1 = ttk.Button(tab2_frame, text="M?", command=button1_click)
@@ -366,10 +366,10 @@ def tab2():
     button2.pack(pady=10)
     button2.place(x=110, y=275, width=75, height=23)
 
-    # Create Button 3
-    button3 = ttk.Button(tab2_frame, text="Thu d? li?u", command=button4_click)
-    button3.pack(pady=10)
-    button3.place(x=205, y=275, width=75, height=23)
+    # # Create Button 3
+    # button3 = ttk.Button(tab2_frame, text="Thu d? li?u", command=button4_click)
+    # button3.pack(pady=10)
+    # button3.place(x=205, y=275, width=75, height=23)
 
     button4 = ttk.Button(tab2_frame, text="Luu tr?", command=button3_click)
     button4.pack(pady=10)
