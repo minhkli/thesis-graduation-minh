@@ -1,0 +1,7 @@
+numpy
+tkinter
+Pillow
+opencv-python
+matplotlib
+firebase_admin
+os-sys

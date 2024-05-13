@@ -1,0 +1,12 @@
+names:
+- vege
+nc: 1
+roboflow:
+  license: CC BY 4.0
+  project: agri-hoqax
+  url: https://universe.roboflow.com/minhph/agri-hoqax/dataset/2
+  version: 2
+  workspace: minhph
+test: ../test/images
+train: Agri-2/train/images
+val: Agri-2/valid/images
