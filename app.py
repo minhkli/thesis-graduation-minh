@@ -43,7 +43,7 @@ def send_data_to_thingsboard(data):
 def normal(image, a=1/100, b = 15):
     # Chuyển đổi hình ảnh thành ma trận
     image_matrix = np.array(image)
-    # hist, bins = np.histogram(image.flatten(), bins=256, range=[20, 120])
+    hist, bins = np.histogram(image.flatten(), bins=256, range=[20, 120])
     mean = int(np.mean(image_matrix))
 
     # Áp dụng hàm bậc 2 vào từng phần tử trong ma trận
@@ -366,10 +366,10 @@ def tab2():
     button2.pack(pady=10)
     button2.place(x=110, y=275, width=75, height=23)
 
-    # Create Button 3
-    button3 = ttk.Button(tab2_frame, text="Thu d? li?u", command=button4_click)
-    button3.pack(pady=10)
-    button3.place(x=205, y=275, width=75, height=23)
+    # # Create Button 3
+    # button3 = ttk.Button(tab2_frame, text="Thu d? li?u", command=button4_click)
+    # button3.pack(pady=10)
+    # button3.place(x=205, y=275, width=75, height=23)
 
     button4 = ttk.Button(tab2_frame, text="Luu tr?", command=button3_click)
     button4.pack(pady=10)
