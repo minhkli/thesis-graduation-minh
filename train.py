@@ -26,7 +26,7 @@ with open("train_vege.pkl", "rb") as f:
     X, y = pkl.load(f)
 
 def svm_model(X,y):
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=500)
 
     clf = make_pipeline(StandardScaler(), SVC(gamma='auto'))
     clf.fit(X_train, y_train)
@@ -49,7 +49,7 @@ def svm_model(X,y):
 
 
 def Kneighbor(X,y):
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=500)
     nca = NeighborhoodComponentsAnalysis(random_state=42)
     knn = KNeighborsClassifier(n_neighbors=3)
     nca_pipe = Pipeline([('nca', nca), ('knn', knn)])
